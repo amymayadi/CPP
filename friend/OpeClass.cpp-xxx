@@ -1,0 +1,36 @@
+//OpeClass.cpp
+#include "OpeClass.h"
+ 
+ 
+OpeClass::OpeClass(void)
+{
+    width = 50;
+    height = 50;
+}
+ 
+ 
+OpeClass::OpeClass(int x,int y):width(x),height(y)
+{
+    width = x;
+    height = y;
+}
+ 
+ 
+OpeClass::~OpeClass(void)
+{
+}
+ 
+ 
+OpeClass& operator<<(const OpeClass& xx)
+{
+	cout<<xx.width<<xx.height;
+	return *this;
+}
+
+int main () 
+{
+    OpeClass opeclass;
+    OpeClass op(100,80);
+    openclass << op;
+    return 0;
+}
